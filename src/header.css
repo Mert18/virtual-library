@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+form {
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 6em;
+    height: 2.5em;
+    margin: 0.5rem;
+    border: none;
+    background-color: var(--secondary);
+    color: rgb(97, 13, 27);
+    font-weight: 600;
+    border-radius: 1rem;
+}
+form .inputs {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    height: 3rem;
+    width: 12rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+textarea {
+    width: 32em;
+    height: 14em;
+    resize: none;
+    text-align: center;
+}
+.preview {
+    width: 60%;
+    height: 35vh;
+    margin: 1rem;
+    background-color: var(--secondary);
+}

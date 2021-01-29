@@ -1,10 +1,10 @@
 import React from 'react';
 import Book from './Book'
-
+import './book.css'
 
 const BookList = ({ bookList }) => {
     return (
-        <div>
+        <div className="booklist">
             {bookList.map((book) => {
                 return (
                     <Book book={book} />

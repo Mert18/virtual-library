@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+:root {
+    --primary: #FCF6F5FF;
+    --secondary: #EDC2D8FF;
+    --tertiary: #BABAD3FF;
+    --forth: #A8D5BAFF;
+    --fifth: #9A94BC;
+  }
+
+
 *{
     margin: 0;
     padding: 0;
@@ -7,5 +17,4 @@
 
 body {
     font-family: 'Nunito Sans', sans-serif;
-    background-color: blanchedalmond;
 }
