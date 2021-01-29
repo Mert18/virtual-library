@@ -55,44 +55,46 @@ const App = () => {
         <div>
             <header>
                 <form onSubmit={handleSubmit} autoComplete="off">
-                    <div className="inputs">
-                        <input
-                            type="text"
-                            name="bookName"
-                            value={bookName}
-                            onChange={(e) => setBookName(e.target.value)}
-                            placeholder="Title"
-                        />
-                        <input
-                            type="text"
-                            name="author"
-                            value={author}
-                            onChange={(e) => setAuthor(e.target.value)}
-                            placeholder="Author"
-                        />
-                        <input
-                            type="text"
-                            name="characters"
-                            value={characters}
-                            onChange={(e) => setCharacters(e.target.value)}
-                            placeholder="Characters(a, b, c)"
-                        />
-                    </div>
-                    <div className="textarea">
-                        <textarea
-                            type="text"
-                            name="thoughts"
-                            value={thoughts}
-                            onChange={(e) => setThoughts(e.target.value)}
-                            placeholder="Thoughts"
-                        />
-                    </div>
+                    <input
+                        type="text"
+                        name="bookName"
+                        value={bookName}
+                        onChange={(e) => setBookName(e.target.value)}
+                        placeholder="Title"
+                        className="title"
+                        spellCheck="false"
+                    />
+                    <input
+                        type="text"
+                        name="author"
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)}
+                        placeholder="Author"
+                        spellCheck="false"
+
+                    />
+                    <input
+                        type="text"
+                        name="characters"
+                        value={characters}
+                        onChange={(e) => setCharacters(e.target.value)}
+                        placeholder="Characters(a, b, c)"
+                        spellCheck="false"
+
+                    />
+
+                    <input
+                        type="text"
+                        name="thoughts"
+                        value={thoughts}
+                        onChange={(e) => setThoughts(e.target.value)}
+                        placeholder="Thoughts"
+                        spellCheck="false"
+                        className="thoughts"
+                    />
 
                     <button>submit</button>
                 </form>
-                <div className="preview">
-
-                </div>
             </header>
             <BookList bookList={bookList} />
         </div>

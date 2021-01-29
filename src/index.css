@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
-:root {
-    --primary: #FCF6F5FF;
-    --secondary: #EDC2D8FF;
-    --tertiary: #BABAD3FF;
-    --forth: #A8D5BAFF;
-    --fifth: #9A94BC;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 
 
 *{
@@ -16,5 +8,6 @@
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Cairo', sans-serif;
+
 }
