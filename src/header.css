@@ -10,7 +10,7 @@ form input {
     height: 3em;
     margin: .3rem;
     border: none;
-    border-bottom: 2px solid palevioletred;
+    border-bottom: 2px solid rgb(131, 112, 216);
     outline: none;
     text-align: center;
     transition: all .6s;
@@ -22,16 +22,17 @@ form button {
     padding: .6rem;
     border: none;
     outline: none;
-    background: palevioletred;
+    background: rgb(16, 44, 122);
     color: white;
     transition: all .5s;
+    text-transform: uppercase;
 }
 form button:hover {
     cursor: pointer;
     transform: scale(1.02);
 }
 form input:focus {
-    border-bottom: 3px solid tomato;
+    border-bottom: 3px solid rgb(29, 52, 151);
 }
 
 .thoughts {
