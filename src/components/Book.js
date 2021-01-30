@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './book.css'
 
 const Book = ({ book }) => {
@@ -8,12 +8,11 @@ const Book = ({ book }) => {
             <h3 className="author"><span>{book.author}</span></h3>
             <div className="characters">
                 {book.characters.split(",").map((el) => {
-                    return <p>{el}</p>
+                    return <p key={el[2]}>{el}</p>
                 })}
             </div>
             <p className="thoughts"><span>{book.thoughts}</span></p>
         </div>
     )
 }
-
 export default Book;

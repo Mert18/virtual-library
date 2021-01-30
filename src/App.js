@@ -11,19 +11,22 @@ const App = () => {
             bookName: "The Joy of Life",
             author: "Emile Zola",
             characters: "Pauline, Lazare, Louise, Chanteau",
-            thoughts: "Culpa velit ea nostrud sunt laborum adipisicing ad veniam irure aliqua."
+            thoughts: "Culpa velit ea nostrud sunt laborum adipisicing ad veniam irure aliqua.",
+            id: 1
         },
         {
             bookName: "The Hunchback of Notre-Dame",
             author: "Victor Hugo",
             characters: "Esmeralda, Quasimodo, ...",
-            thoughts: "Qui cillum adipisicing occaecat cillum."
+            thoughts: "Qui cillum adipisicing occaecat cillum.",
+            id: 2,
         },
         {
             bookName: "Sophie's World",
             author: "Jostein Gaarder",
             characters: "Sophie, ...",
-            thoughts: "Sint in laboris adipisicing amet nulla eiusmod quis pariatur sit ipsum nisi ad ullamco cillum."
+            thoughts: "Sint in laboris adipisicing amet nulla eiusmod quis pariatur sit ipsum nisi ad ullamco cillum.",
+            id: 3,
         },
     ]);
 
@@ -48,7 +51,7 @@ const App = () => {
     };
 
     useEffect(() => {
-        localStorage.setItem('bookList', JSON.stringify(bookList))
+        localStorage.setItem('bookList', JSON.stringify(bookList));
     })
 
     return (
@@ -63,6 +66,7 @@ const App = () => {
                         placeholder="Title"
                         className="title"
                         spellCheck="false"
+                        required
                     />
                     <input
                         type="text"
@@ -71,7 +75,7 @@ const App = () => {
                         onChange={(e) => setAuthor(e.target.value)}
                         placeholder="Author"
                         spellCheck="false"
-
+                        required
                     />
                     <input
                         type="text"
@@ -83,7 +87,7 @@ const App = () => {
 
                     />
 
-                    <input
+                    <textarea
                         type="text"
                         name="thoughts"
                         value={thoughts}

@@ -12,10 +12,10 @@ form input {
     border: none;
     border-bottom: 2px solid rgb(131, 112, 216);
     outline: none;
-    text-align: center;
     transition: all .6s;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    padding: 2rem;
 }
 form button {
     margin-top: 1rem;
@@ -35,7 +35,19 @@ form input:focus {
     border-bottom: 3px solid rgb(29, 52, 151);
 }
 
-.thoughts {
-    height: 10em;
-    text-transform: inherit;
+form textarea{
+    resize: none;
+    width: 60%;
+    height: 20vh;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(131, 112, 216);
+
+}
+form textarea:focus {
+    border-bottom: 3px solid rgb(29, 52, 151);
 }

@@ -3,9 +3,12 @@
     background-color: var(--secondary);
     border-radius: 0.4rem;
     width: 60%;
+    background-color: white;
+    padding: 2rem;
+    position: relative;
 }
 .book * {
-    margin: 1rem 0;
+    margin-top: .5rem;
 }
 
 .booklist {

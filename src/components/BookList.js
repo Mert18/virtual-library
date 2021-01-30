@@ -2,12 +2,12 @@ import React from 'react';
 import Book from './Book'
 import './book.css'
 
-const BookList = ({ bookList }) => {
+const BookList = ({ bookList, removeBook }) => {
     return (
         <div className="booklist">
-            {bookList.map((book) => {
+            {bookList.map((book, index) => {
                 return (
-                    <Book book={book} />
+                    <Book book={book} key={index} index={index} />
                 )
             })}
         </div>
