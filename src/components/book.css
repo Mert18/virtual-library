@@ -20,6 +20,62 @@
 .characters {
     display: flex;
 }
+.characterss {
+    display: flex;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.characterss * {
+    margin-right: 1.6rem;
+}
 .characters * {
     margin-right: 1.3em;
+}
+
+
+.modal-wrapper {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 1;
+    background-color: rgb(62, 91, 134);
+    border: 3p solid black;
+    width: 80%;
+    height: 90%;
+    border-radius: 1rem;
+    padding: 3rem;
+    letter-spacing: 1.5px;
+
+}
+
+.modal-h {
+    color: white;
+}
+.modal-p {
+    color: white;
+}
+.modal-button {
+    padding: .6rem;
+    font-weight: 800;
+    background:transparent;
+    color: white;
+    margin-top: 2rem;
+    transition: all .4s;
+    border: 2px solid black;
+}
+.modal-button:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.details {
+    padding: .4rem;
+    font-weight: 800;
+    background:transparent;
+    transition: all .5s;
+}
+.details:hover {
+    cursor: pointer;
+    transform: scale(1.02);
 }

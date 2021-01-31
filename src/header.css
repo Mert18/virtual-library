@@ -10,7 +10,7 @@ form input {
     height: 3em;
     margin: .3rem;
     border: none;
-    border-bottom: 2px solid rgb(131, 112, 216);
+    border-bottom: 3px solid rgb(131, 112, 216);
     outline: none;
     transition: all .6s;
     font-size: 1.3rem;
@@ -19,17 +19,15 @@ form input {
 }
 form button {
     margin-top: 1rem;
-    padding: .6rem;
-    border: none;
-    outline: none;
-    background: rgb(16, 44, 122);
-    color: white;
-    transition: all .5s;
+    padding: .4rem;
+    font-weight: 800;
+    background:transparent;
     text-transform: uppercase;
+    transition: ease-in-out .5s;
 }
 form button:hover {
     cursor: pointer;
-    transform: scale(1.02);
+    transform: scale(1.04);
 }
 form input:focus {
     border-bottom: 3px solid rgb(29, 52, 151);
@@ -44,6 +42,7 @@ form textarea{
     font-size: 1rem;
     padding: 1rem;
     border: none;
+    line-height: .6rem;
     outline: none;
     border-bottom: 2px solid rgb(131, 112, 216);
 
