@@ -17,6 +17,7 @@ const Book = ({ book }) => {
                     return <p key={el[2]}>{el}</p>
                 })}
             </div>
+            <div>{book.date}</div>
             <button onClick={toggleModal} className="details">DETAILS</button>
             {
                 showModal ? (

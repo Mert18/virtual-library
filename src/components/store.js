@@ -7,14 +7,15 @@ export const initialState = [
         title: "Yaşama Sevinci",
         author: "Emile Zola",
         characters: "Pauline, Lousie, Lazare, Chanteau",
-        thoughts: "nice book."
+        thoughts: "nice book.",
+        date: ""
     },
 ]
 
 export const reducer = (state, action) => {
     switch (action.type) {
         case 'addBook':
-            const newBookList = [...state, { title: action.title, author: action.author, characters: action.characters, thoughts: action.characters }];
+            const newBookList = [...state, { title: action.title, author: action.author, characters: action.characters, thoughts: action.characters, date: action.date }];
             return (
                 state = newBookList
             )

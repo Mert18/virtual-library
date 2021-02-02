@@ -11,7 +11,7 @@
     margin-top: .5rem;
 }
 
-.booklist {
+.bookList {
     display: flex;
     flex-direction: column;
     align-items: center;
