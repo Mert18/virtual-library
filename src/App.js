@@ -1,107 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import BookList from './components/BookList'
+import React, { useReducer, useEffect } from 'react';
+import BookForm from './components/BookForm'
 import './header.css'
+import BookList from './components/BookList'
+import { Context, reducer, initialState } from './components/store'
 
 const App = () => {
+    const savedItems = JSON.parse(localStorage.getItem('state'));
 
-    const savedItems = JSON.parse(localStorage.getItem('bookList'));
-
-    const [bookList, setBookList] = useState(savedItems || [
-        {
-            bookName: "The Joy of Life",
-            author: "Emile Zola",
-            characters: "Pauline, Lazare, Louise, Chanteau",
-            thoughts: "Culpa velit ea nostrud sunt laborum adipisicing ad veniam irure aliqua.",
-            id: 1
-        },
-        {
-            bookName: "The Hunchback of Notre-Dame",
-            author: "Victor Hugo",
-            characters: "Esmeralda, Quasimodo, ...",
-            thoughts: "Qui cillum adipisicing occaecat cillum.",
-            id: 2,
-        },
-        {
-            bookName: "Sophie's World",
-            author: "Jostein Gaarder",
-            characters: "Sophie, ...",
-            thoughts: "Sint in laboris adipisicing amet nulla eiusmod quis pariatur sit ipsum nisi ad ullamco cillum.",
-            id: 3,
-        },
-    ]);
-
-    const [bookName, setBookName] = useState("");
-    const [author, setAuthor] = useState("");
-    const [characters, setCharacters] = useState("");
-    const [thoughts, setThoughts] = useState("");
-
-    const addBook = (book) => {
-        let copy = [...bookList];
-        copy = [...copy, book];
-        setBookList(copy);
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        addBook({ bookName, author, characters, thoughts });
-        setBookName("");
-        setAuthor("");
-        setCharacters("");
-        setThoughts("");
-    };
+    const [state, dispatch] = useReducer(reducer, savedItems || initialState);
 
     useEffect(() => {
-        localStorage.setItem('bookList', JSON.stringify(bookList));
-    })
-
+        localStorage.setItem('state', JSON.stringify(state));
+    });
     return (
-        <div>
-            <header>
-                <form onSubmit={handleSubmit} autoComplete="off">
-                    <input
-                        type="text"
-                        name="bookName"
-                        value={bookName}
-                        onChange={(e) => setBookName(e.target.value)}
-                        placeholder="Title"
-                        className="title"
-                        spellCheck="false"
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="author"
-                        value={author}
-                        onChange={(e) => setAuthor(e.target.value)}
-                        placeholder="Author"
-                        spellCheck="false"
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="characters"
-                        value={characters}
-                        onChange={(e) => setCharacters(e.target.value)}
-                        placeholder="Characters(a, b, c)"
-                        spellCheck="false"
-
-                    />
-
-                    <textarea
-                        type="text"
-                        name="thoughts"
-                        value={thoughts}
-                        onChange={(e) => setThoughts(e.target.value)}
-                        placeholder="Thoughts"
-                        spellCheck="false"
-                        className="thoughts"
-                    />
-
-                    <button>submit</button>
-                </form>
-            </header>
-            <BookList bookList={bookList} />
-        </div>
+        <Context.Provider value={{ state, dispatch }}>
+            <div>
+                <header>
+                    <BookForm />
+                </header>
+                <main>
+                    <BookList />
+                </main>
+            </div>
+        </Context.Provider>
     )
 }
 

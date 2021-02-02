@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Book from './Book'
 import './book.css'
+import { Context } from './store'
 
-const BookList = ({ bookList, removeBook }) => {
+
+const BookList = () => {
+    const { state, dispatch } = useContext(Context);
+
     return (
-        <div className="booklist">
-            {bookList.map((book, index) => {
+        <div className="bookList">
+            {state.map((book, index) => {
                 return (
                     <Book book={book} key={index} index={index} />
                 )

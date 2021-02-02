@@ -1,11 +1,11 @@
-form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
-form input {
+.form input {
     width: 60%;
     height: 3em;
     margin: .3rem;
@@ -17,7 +17,7 @@ form input {
     font-weight: 600;
     padding: 2rem;
 }
-form button {
+.form button {
     margin-top: 1rem;
     padding: .4rem;
     font-weight: 800;
@@ -25,11 +25,11 @@ form button {
     text-transform: uppercase;
     transition: ease-in-out .5s;
 }
-form button:hover {
+.form button:hover {
     cursor: pointer;
     transform: scale(1.04);
 }
-form input:focus {
+.form input:focus {
     border-bottom: 3px solid rgb(29, 52, 151);
 }
 
