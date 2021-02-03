@@ -37,7 +37,7 @@
 .modal-wrapper {
     position: fixed;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%,-5%);
     z-index: 1;
     background-color: rgb(62, 91, 134);
     border: 3p solid black;
@@ -63,6 +63,7 @@
     margin-top: 2rem;
     transition: all .4s;
     border: 2px solid black;
+    margin-right: 2rem;
 }
 .modal-button:hover {
     cursor: pointer;

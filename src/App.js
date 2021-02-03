@@ -3,6 +3,7 @@ import BookForm from './components/BookForm'
 import './header.css'
 import BookList from './components/BookList'
 import { Context, reducer, initialState } from './components/store'
+import Quote from './components/Quote'
 
 const App = () => {
     const savedItems = JSON.parse(localStorage.getItem('state'));
@@ -14,11 +15,13 @@ const App = () => {
     });
     return (
         <Context.Provider value={{ state, dispatch }}>
-            <div>
+            <div className="container">
+                <a href="https://github.com/Mert18/virtual-library" target="_blank"><div className="github">GITHUB</div></a>
                 <header>
-                    <BookForm />
+                    <Quote />
                 </header>
                 <main>
+                    <BookForm />
                     <BookList />
                 </main>
             </div>

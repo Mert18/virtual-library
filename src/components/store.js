@@ -19,6 +19,12 @@ export const reducer = (state, action) => {
             return (
                 state = newBookList
             )
+        case 'removeBook':
+            const newBookListt = [...state];
+            newBookListt.splice(action.index, 1);
+            return (
+                state = newBookListt
+            )
         default:
             return state;
     }

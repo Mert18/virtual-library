@@ -1,4 +1,15 @@
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    text-align: center;
+    background-color: white;
+    margin: 5rem;
+    border-radius: 4rem;
+}
+
 .error {
     color: red;
     font-size: 1rem;
@@ -9,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem;
 }
 .form input {
     width: 60%;
@@ -59,4 +70,45 @@ form textarea:focus {
 
 ::placeholder {
     font-weight: 300;
+}
+
+blockquote {
+    font-size: 1em;
+    line-height: 2em;
+}
+
+blockquote:before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: close-quote;
+}
+
+blockquote:before,
+blockquote:after {
+  display: inline-block;
+  vertical-align: bottom;
+  color: black;
+  font-size: 3em;
+  top: .3em;
+  position: relative;
+}
+
+.quote {
+
+}
+.author {
+    color: rgb(107, 15, 15);
+}
+.booki {
+    color: red;
+}
+.container a {
+    position: absolute;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    top: 5%;
+    left: 90%;
 }
