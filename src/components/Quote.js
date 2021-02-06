@@ -20,7 +20,7 @@ const Quote = () => {
 
 
     return (
-        <div>
+        <div className="quote-wrapper">
             <blockquote><h2 className="quote">{quot.quote}</h2></blockquote>
             <h3 className="author">{quot.author}</h3>
             <h4 className="booki">{quot.book}</h4>

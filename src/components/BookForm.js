@@ -26,22 +26,17 @@ const BookForm = () => {
                 }}
             >
                 {formik => (
-                    <Form onSubmit={formik.handleSubmit} className="form">
-                        <label htmlFor="title">Title</label>
-                        <Field name="title" type="text" className="title" placeholder="Yaşama Sevinci" />
+                    <Form onSubmit={formik.handleSubmit} className="form" autocomplete="off" >
+                        <Field name="title" type="text" className="title" placeholder="Title (e.g. Yaşama Sevinci)" />
                         <ErrorMessage name="title" component={TextError} />
 
-                        <label htmlFor="author">Author</label>
-                        <Field name="author" type="text" className="author" placeholder="Emile Zola" />
+                        <Field name="author" type="text" className="author" placeholder="Author (e.g. Emile Zola)" />
                         <ErrorMessage name="author" component={TextError} />
 
-                        <label htmlFor="characters">Characters</label>
-                        <Field name="characters" type="text" placeholder="Pauline, Lazare, Louise, Chanteau, Veronique" className="characters" />
+                        <Field name="characters" type="text" placeholder="Characters (e.g. Pauline, Lazare, Louise, Chanteau)" className="characters" />
 
-                        <label htmlFor="thoughts">Thoughts</label>
-                        <Field name="thoughts" as="textarea"></Field>
+                        <Field name="thoughts" as="textarea" placeholder="Thoughts"></Field>
 
-                        <label htmlFor="date">Date</label>
                         <Field name="date" type="date" />
 
                         <button type="submit">Submit</button>

@@ -16,14 +16,19 @@ const App = () => {
     return (
         <Context.Provider value={{ state, dispatch }}>
             <div className="container">
-                <a href="https://github.com/Mert18/virtual-library" target="_blank"><div className="github">GITHUB</div></a>
+
                 <header>
                     <Quote />
                 </header>
                 <main>
-                    <BookForm />
-                    <BookList />
+                    <BookForm className="bookform" />
+                    <BookList className="bookList" />
                 </main>
+
+                <footer>
+                    <a href="https://github.com/Mert18/virtual-library" target="_blank"><div className="github">GITHUB</div></a>
+                    <a href="https://www.linkedin.com/in/mert-u-8248ab135/" target="_blank"><div className="github">LINKEDIN</div></a>
+                </footer>
             </div>
         </Context.Provider>
     )
