@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import '../header.css'
+import '../styles/main.scss'
 
-let data = require('../assets/kitaplarda.json')
+
+let data = require('../assets/quotes.json')
 
 const Quote = () => {
 
@@ -20,10 +21,10 @@ const Quote = () => {
 
 
     return (
-        <div className="quote-wrapper">
-            <blockquote><h2 className="quote">{quot.quote}</h2></blockquote>
-            <h3 className="author">{quot.author}</h3>
-            <h4 className="booki">{quot.book}</h4>
+        <div className="quote">
+            <blockquote><h2 className="quote__text">{quot.quote}</h2></blockquote>
+            <h3 className="quote__author">{quot.author}</h3>
+            <h4 className="quote__book">{quot.book}</h4>
         </div>
     )
 }

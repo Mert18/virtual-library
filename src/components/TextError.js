@@ -1,5 +1,6 @@
 import React from 'react';
-import '../header.css'
+import '../styles/main.scss'
+
 
 const TextError = (props) => {
     return (

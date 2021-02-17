@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/main.scss'
+
 
 
 export const Context = React.createContext();
@@ -15,7 +17,7 @@ export const initialState = [
 export const reducer = (state, action) => {
     switch (action.type) {
         case 'addBook':
-            const newBookList = [...state, { title: action.title, author: action.author, characters: action.characters, thoughts: action.characters, date: action.date }];
+            const newBookList = [...state, { title: action.title, author: action.author, characters: action.characters, thoughts: action.thoughts, date: action.date }];
             return (
                 state = newBookList
             )

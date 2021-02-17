@@ -1,9 +1,14 @@
 import React, { useReducer, useEffect } from 'react';
+
 import BookForm from './components/BookForm'
-import './header.css'
 import BookList from './components/BookList'
-import { Context, reducer, initialState } from './components/store'
 import Quote from './components/Quote'
+import Header from './components/Header'
+
+import './styles/main.scss'
+
+
+import { Context, reducer, initialState } from './components/store'
 
 const App = () => {
     const savedItems = JSON.parse(localStorage.getItem('state'));
@@ -16,19 +21,15 @@ const App = () => {
     return (
         <Context.Provider value={{ state, dispatch }}>
             <div className="container">
-
-                <header>
+                <header className="container__header">
+                    <Header />
                     <Quote />
                 </header>
-                <main>
-                    <BookForm className="bookform" />
-                    <BookList className="bookList" />
-                </main>
 
-                <footer>
-                    <a href="https://github.com/Mert18/virtual-library" target="_blank"><div className="github">GITHUB</div></a>
-                    <a href="https://www.linkedin.com/in/mert-u-8248ab135/" target="_blank"><div className="github">LINKEDIN</div></a>
-                </footer>
+                <main className="container__main">
+                    <BookForm />
+                    <BookList />
+                </main>
             </div>
         </Context.Provider>
     )

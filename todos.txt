@@ -1,0 +1,2 @@
+Book Details kısmına Like kısmı eklenecek.
+Book Details açılırken transition eklenecek.
