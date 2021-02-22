@@ -1,0 +1,21 @@
+
+
+.quote {
+    font-size: .9rem;
+
+    &__text {
+        padding: 1rem;
+    }
+
+    &__author {
+        color: $tertiary-color;
+        margin: .5rem;
+        font-size: 1.4rem;
+    }
+    &__book {
+        color: $tertiary-color;
+        margin : .5rem;
+        font-size: 1.3rem;
+    }
+
+}
