@@ -1,2 +1,7 @@
-Book Details kısmına Like kısmı eklenecek.
-Book Details açılırken transition eklenecek.
+client
+    kullanıcı authentication eklenecek.
+    kayıt ve giriş formları eklenecek.
+    header home yerine logo gelecek.
+    home'da sidebar kısmında kullanıcılar tarafından eklenen postlar için bildirim görünecek.
+    content kısmında en çok beğenilen değerlendirmeler ya da ayın kitabı olabilir.
+    postlara beğenme özelliği eklenecek
