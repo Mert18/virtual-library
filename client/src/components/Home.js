@@ -1,5 +1,6 @@
 import React from 'react';
 
+import BookList from './BookList';
 import Quote from './Quote'
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
             </div>
             <div className="home__main">
                 <div className="home__main__content">
-                    <h2>content here</h2>
+                    <h2>main content</h2>
                 </div>
 
                 <div className="home__main__sidebar">

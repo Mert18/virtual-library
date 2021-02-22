@@ -3,7 +3,6 @@
     
     height: 4em;
     background-color: $primary-color;
-    
     &__items {
         a {
             text-decoration: none;
@@ -11,7 +10,7 @@
             margin-right: 2rem;
         }
         h2 {
-            color: $base-color;
+            color: $secondary-color;
         }
         display: flex;
     justify-content: space-around;
@@ -23,12 +22,16 @@
         margin-left: 2rem;
         input {
             border: none;
-            border-bottom: 2px solid $base-color;
+            border-bottom: 2px solid $secondary-color;
             padding: .4rem;
             background: transparent;
-            color: $base-color;
+            color: $secondary-color;
+            outline: none;
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
             &::placeholder {
-                color: $base-color;
+                color: $secondary-color;
             }
         }
     }
