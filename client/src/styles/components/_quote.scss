@@ -2,19 +2,20 @@
 
 .quote {
     font-size: .9rem;
-    color: $tertiary-color;
+    color: $base-color;
 
     &__text {
         padding: 1rem;
+        font-size: 1rem;
     }
 
     &__author {
         margin: .5rem;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
     &__book {
         margin : .5rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
 }

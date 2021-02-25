@@ -10,7 +10,7 @@
             margin-right: 2rem;
         }
         h2 {
-            color: $secondary-color;
+            color: $base-color;
         }
         display: flex;
     justify-content: space-around;
@@ -22,16 +22,16 @@
         margin-left: 2rem;
         input {
             border: none;
-            border-bottom: 2px solid $secondary-color;
+            border-bottom: 2px solid $base-color;
             padding: .4rem;
             background: transparent;
-            color: $secondary-color;
+            color: $base-color;
             outline: none;
             text-align: center;
             font-weight: 600;
             text-transform: uppercase;
             &::placeholder {
-                color: $secondary-color;
+                color: $base-color;
             }
         }
     }
