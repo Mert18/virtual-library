@@ -13,11 +13,11 @@
         display: flex;
         width: 100%;
         &__content {
-            background-color: black;
+            background-color: $secondary-color;
             flex: 2;
         }
         &__sidebar {
-            background-color: black;
+            background-color: $secondary-color;
             flex: 1;
         }
     }

@@ -1,51 +1,39 @@
 
 .header {
-    
     height: 4em;
-    background-color: $primary-color;
+    width: 100%;
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     &__items {
+        width: 100%;
         a {
             text-decoration: none;
             color: $base-color;
             margin-right: 2rem;
         }
-        h2 {
-            color: $base-color;
-        }
         display: flex;
-    justify-content: space-around;
-        &__search {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-        margin-left: 2rem;
-        input {
-            border: none;
-            border-bottom: 2px solid $base-color;
-            padding: .4rem;
-            background: transparent;
-            color: $base-color;
-            outline: none;
-            text-align: center;
-            font-weight: 600;
-            text-transform: uppercase;
-            &::placeholder {
-                color: $base-color;
+        justify-content: space-around;
+        &__logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                color: $tertiary-color;
+                font-weight: 300;
             }
         }
-    }
-    
-    &__nav {
-        display: flex;
-        align-items: center;
-        color: $base-color;
-    }
-    &__user {
-        display: flex;
-        align-items: center;
-        color: $base-color;
-    }
+        &__nav {
+            display: flex;
+            align-items: center;
+            color: $base-color;
+        }
+        &__user {
+            display: flex;
+            align-items: center;
+            color: $base-color;
+        }
 
     }
 }
