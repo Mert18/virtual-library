@@ -7,11 +7,8 @@ let data = require('../assets/quotes.json')
 const Quote = () => {
 
     const [quot, setQuot] = useState({
-        "id": 17,
-        "book": "Böyle Söyledi Zerdüşt",
-        "publisher": "Türkiye İş Bankası Kültür Yayınları",
-        "quote": "   Kısırsınız siz, b u  y ü z d e n inancınız da eksik. Oysa yaratmak zorunda olanın gelecekten haber veren rüyaları ve yıldız-burçları da olmuştur daima - ve inanmaya inanmıştır o! -",
-        "translate": "Mustafa Tüzel"
+        "quoteText": "If you accept the expectations of others, especially negative ones, then you never will change the outcome.",
+        "quoteAuthor": "Michael Jordan"
     });
 
     useEffect(() => {
@@ -22,9 +19,8 @@ const Quote = () => {
 
     return (
         <div className="quote">
-            <h2 className="quote__text">{quot.quote}</h2>
-            <h3 className="quote__author">{quot.author}</h3>
-            <h4 className="quote__book">{quot.book}</h4>
+            <h2 className="quote__text">{quot.quoteText}</h2>
+            <h3 className="quote__author">{quot.quoteAuthor}</h3>
         </div>
     )
 }
