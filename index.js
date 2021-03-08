@@ -2,6 +2,9 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 import postRoutes from './routes/Posts.js';
 
 const app = express();
@@ -12,7 +15,7 @@ app.use(cors())
 
 app.use('/posts', postRoutes)
 
-const CONNECTION_URL = process.env.MONGO_KEY;
+const CONNECTION_URL = process.env.REACT_APP_MONGO_URI;
 
 const PORT = process.env.PORT || 4000;
 
