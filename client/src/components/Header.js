@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="header__items__nav">
                     <NavLink exact to="/" activeClassName="selected">
                         <div className="header__items__logo">
-                            <a href="/"><h1>virtual library</h1></a>
+                            <h1>virtual library</h1>
                         </div>
                     </NavLink>
                 </div>

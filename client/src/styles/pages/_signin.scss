@@ -1,5 +1,6 @@
 
-.signup {
+
+.signin {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,10 +33,10 @@
     }
   }
 
-.signup .inputbox {
+.signin .inputbox {
     position: relative;
 }
-.signup .inputbox input {
+.signin .inputbox input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -47,7 +48,7 @@
     background: transparent;
 }
 
-.signup .inputbox label {
+.signin .inputbox label {
     position: absolute;
     top:0;
     left: 0;
@@ -58,7 +59,7 @@
     transition: .5s;
 }
 
-.signup .inputbox input:focus ~ label{
+.signin .inputbox input:focus ~ label{
   top: -20px;
   left: 0px;
   color: $secondary-color;
