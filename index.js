@@ -1,26 +1,43 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const mongoose = require('mongoose');
 
-import dotenv from 'dotenv';
-dotenv.config();
-
-import postRoutes from './routes/Posts.js';
+require('dotenv').config()
 
 const app = express();
 
-app.use(express.json({ limit: "30mb", extended: true }))
-app.use(express.urlencoded({ limit: "30mb", extended: true }))
-app.use(cors())
+//connect to db
+mongoose.connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+})
+    .then(() => console.log('DB Connected.'))
+    .catch(err => console.log('DB Error.'))
 
-app.use('/posts', postRoutes)
+// import routes
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/user');
 
-const CONNECTION_URL = process.env.REACT_APP_MONGO_URI;
+// app middleware
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}))
+/* app.use(cors()); // allows all origins */
+if (process.env.NODE_ENV == 'development') {
+    app.use(cors({ origin: `http://localhost:3000` }))
+}
 
-const PORT = process.env.PORT || 4000;
+//middleware
+app.use('/api', authRoutes);
+app.use('/api', userRoutes);
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => app.listen(PORT, () => console.log(`server is running on ${PORT}`)))
-    .catch((err) => console.log(err.message))
 
-mongoose.set('useFindAndModify', false)
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
+    console.log(`API is running on port ${port}`)
+})

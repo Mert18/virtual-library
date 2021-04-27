@@ -1,0 +1,13 @@
+
+
+.profileInfo {
+    background-color: $base-color;
+    padding: 3rem;
+    margin: 2rem;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 1.5rem;
+    &__name {
+        text-align: center;
+        color: $primary-color;
+    }
+}

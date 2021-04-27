@@ -1,0 +1,26 @@
+
+.navbar {
+    background-color: $base-color;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 9vh;
+    li {
+        padding: .5rem 1rem;
+        &:first-child {
+            margin-left: 5rem;
+        }
+    }
+
+    &__title {
+        color: $primary-color;
+        margin: 0rem 4rem;
+    }
+}
+.signout {
+    color: $primary-color;
+    &:hover {
+        color: red;
+        cursor: pointer;
+    }
+}

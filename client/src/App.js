@@ -1,39 +1,14 @@
-import React, { useReducer, useEffect } from 'react';
-
-import Home from './components/Home';
-import Header from './components/Header';
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
-
-import './styles/main.scss'
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom";
-
-
-
+import React from 'react'
+import Layout from './core/Layout';
+import './styles/main.scss';
 
 const App = () => {
-
     return (
-        <Router>
-            <div className="container">
-                <header className="container__header">
-                    <Header />
-                </header>
-
-                <main className="container__main">
-                    <Switch>
-                        <Route path="/" exact component={Home} />
-                        <Route path="/signin" component={SignIn} />
-                        <Route path="/signup" component={SignUp} />
-                    </Switch>
-                </main>
+        <Layout>
+            <div>
+                
             </div>
-        </Router>
+        </Layout>
     )
 }
 

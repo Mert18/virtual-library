@@ -2,26 +2,12 @@
 @import 'utilities/mixins';
 @import 'utilities/variables';
 
+@import 'components/header.scss';
 
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/base';
 
-@import 'components/buttons';
-@import 'components/quote';
-
-
-@import 'layout/footer';
-@import 'layout/header';
-@import 'layout/navigation';
-@import 'layout/content';
-
-
 @import 'pages/home';
-@import 'pages/signup';
-@import 'pages/signin';
-
-
-@import 'themes/admin';
-@import 'themes/theme';
-
+@import 'pages/form';
+@import 'pages/profile';
