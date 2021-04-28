@@ -4,5 +4,94 @@
     grid-template-columns: repeat(12, 1fr);
     &__posts {
         grid-column: 2 / 8;
+        margin-top: 4rem;
+        &__create {
+            form {
+                padding: 3rem 0rem;
+                .createinputbox {
+                    position: relative;
+                    
+                    input {
+                        width: 70%;
+                        padding: 10px 0;
+                        font-size: 1.2rem;
+                        color: $primary-color;
+                        margin-bottom: 30px;
+                        outline: none;
+                        background: transparent;
+                        text-align: center;
+                        border-radius: .3rem;
+                        background-color: $base-color;
+                        transition: all .3s;
+
+
+                        &:focus {
+                            transform: scale(1.02);
+                            transition: all .3s;
+                            background-color: $helper;
+
+                        }
+                    }
+
+                    label {
+                        position: absolute;
+                        top: -30px;
+                        left: 0;
+                        padding: 10px 0;
+                        font-size: 16px;
+                        color: $base-color;
+                        pointer-events: none;
+                        transition: .5s;
+                    }
+
+                    textarea {
+                        width: 70%;
+                        resize: none;
+                        height: 6rem;
+                        background-color: $base-color;
+                        border-radius: .3rem;
+                        text-align: center;
+                        color: $primary-color;
+                        transition: all .3s;
+                        font-size: 1.2rem;
+                        padding: .5rem;
+                        &:focus {
+                            transform: scale(1.02);
+                            transition: all .3s;
+                            background-color: $helper;
+                        }
+                    }
+
+                }
+
+                button {
+                    background-color: $base-color;
+                    border: none;
+                    outline: none;
+                    color: $primary-color;
+                    padding: .9rem;
+                    width: 15%;
+                    border-radius: .9rem;
+                    &:hover {
+                        background-color: $helper;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
     }
+}
+
+.createshow {
+        background-color: $base-color;
+        border: none;
+        outline: none;
+        color: $primary-color;
+        padding: .9rem;
+        width: 15%;
+        border-radius: .9rem;
+        &:hover {
+            background-color: $helper;
+            cursor: pointer;
+        }
 }

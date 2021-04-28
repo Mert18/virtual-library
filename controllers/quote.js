@@ -28,7 +28,19 @@ exports.read = (req, res) => {
 // @route POST /api/quotes
 // @access Private
 exports.createQuote = asyncHandler(async(req, res) => {
-    const newQuote = req.body;
-    const createdQuote = await newQuote.save();
-    res.status(201).json(createdQuote);
+    const {bookTitle, author, quote} = req.body;
+    const newquote = new Quote({bookTitle, author, quote});
+    newquote.save((err, quote) => {
+        if(err){
+            console.log('error in saving quote.');
+            return res.status(401).json({
+                error: 'error saving quote in database.'
+            })
+
+        }
+        return res.json({
+            message: 'quote sent.'
+        })
+
+    })
 })
