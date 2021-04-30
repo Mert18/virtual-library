@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Layout from './core/Layout';
 import './styles/main.scss';
 import axios from 'axios';
@@ -8,7 +8,6 @@ import { authenticate, isAuth, getCookie } from './auth/helpers';
 
 const App = ({history}) => {
 
-    const [createQuote, setCreateQuote] = useState(false);
     const [values, setValues] = useState({
         bookTitle: "",
         author: "",
@@ -17,6 +16,7 @@ const App = ({history}) => {
     const {bookTitle, author, quote} = values;
 
     const token = getCookie('token');
+
 
 
     const handleChange= (name) => (e) => {
@@ -52,8 +52,6 @@ const App = ({history}) => {
             <div className="home">
 
                 <div className="home__posts">
-                    {createQuote ? 
-
                     <div className="home__posts__create">
                         <h2>Send a Quote</h2>
                         <form autoComplete="off">
@@ -75,11 +73,6 @@ const App = ({history}) => {
                             <button className="createsend" onClick={handleSubmit}>SEND</button>
                         </form>
                     </div>
-                    :
-                    <button className="createshow" onClick={() => {setCreateQuote(!createQuote)}}>Create Quote</button>
-                    }
-                    
-
                     <div className="home__posts__posts">
                         <Posts />
                     </div>

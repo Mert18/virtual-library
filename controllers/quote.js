@@ -36,11 +36,8 @@ exports.createQuote = asyncHandler(async(req, res) => {
             return res.status(401).json({
                 error: 'error saving quote in database.'
             })
-
         }
-        return res.json({
-            message: 'quote sent.'
-        })
+        res.json(quote);
 
     })
 })

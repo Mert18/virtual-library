@@ -13,12 +13,12 @@
     border-radius: 10px;
     text-align: center;
     h1 {
-        color: white;
+        color: $primary-color;
         padding: 2rem;
     }
 
     button {
-        background-color: white;
+        background-color: $primary-color;
         padding: 1rem 2rem;
         outline: none;
         border: none;
@@ -27,7 +27,7 @@
 
         &:hover {
             cursor: pointer;
-            background-color: $primary-color;
+            background-color: $secondary-color;
         }
         
     }
@@ -40,13 +40,13 @@
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: $secondary-color;
     margin-bottom: 30px;
     border: none;
-    border-bottom: 2px solid $secondary-color;
     outline: none;
     background: transparent;
     text-align: center;
+    border-bottom: 2px solid $primary-color;
+    color: $primary-color;
 
 }
 
@@ -56,15 +56,14 @@
     left: 0;
     padding: 10px 0;
     font-size: 16px;
-    color: $secondary-color;
     pointer-events: none;
     transition: .5s;
+    color: $primary-color;
 }
 
 .formcontainer .inputbox input:focus ~ label{
   top: -20px;
   left: 0px;
-  color: $secondary-color;
   font-size: 12px;
 }
 
@@ -141,7 +140,6 @@
         margin-top: 1rem;
 
         &:hover {
-            background-color: $tertiary-color;
             cursor: pointer;
         }
     }
