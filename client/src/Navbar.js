@@ -42,6 +42,14 @@ const Navbar = ({match, history}) => {
                     </li>
                 )}
 
+                {isAuth() && isAuth().role === 'subscriber' && (
+                    <li>
+                        <Link to="/createpost" style={isActive('/createpost')}>
+                            Create Post
+                        </Link>
+                    </li>
+                )}
+
                 {isAuth() && (
                     <span className="signout" onClick={() => {
                         signout(() => {

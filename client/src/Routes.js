@@ -10,6 +10,7 @@ import Admin from './core/Admin';
 import AdminRoute from './auth/AdminRoute';
 import Forgot from './auth/Forgot';
 import Reset from './auth/Reset';
+import CreatePost from './components/pages/CreatePost';
 
 const Routes = () => {
     return (
@@ -23,6 +24,8 @@ const Routes = () => {
                 <Route path="/auth/activate/:token" component={Activate} />
                 <AdminRoute path="/admin" component={Admin} />
                 <PrivateRoute path="/private" component={Private} />
+
+                <Route path="/createpost" component={CreatePost} />
                 
             </Switch>
         </BrowserRouter>
