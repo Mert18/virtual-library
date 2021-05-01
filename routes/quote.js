@@ -6,6 +6,6 @@ const {requireSignin, adminMiddleware} = require('../controllers/auth');
 
 router.get('/quotes/:id', read);
 router.get('/quotes', getAllQuotes);
-router.post('/quotes', requireSignin, createQuote);
+router.post('/quotes', createQuote);
 
 module.exports = router;

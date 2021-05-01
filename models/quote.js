@@ -16,6 +16,10 @@ const quoteSchema = new mongoose.Schema({
         trim: true,
         required: true
     },
+    thoughts: {
+        type: String,
+        trim: true
+    },
     createdAt: {
         type: Date,
         default: Date.now

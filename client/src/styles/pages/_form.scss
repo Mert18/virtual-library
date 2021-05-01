@@ -12,6 +12,17 @@
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
     text-align: center;
+
+    select {
+        background-color: $primary-color;
+        height: 2rem;
+        outline: none;
+        border: none;
+        option {
+            padding: 2rem;
+        }
+    }
+
     h1 {
         color: $primary-color;
         padding: 2rem;

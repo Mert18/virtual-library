@@ -94,11 +94,14 @@
 box-shadow: 0px 4px 20px -11px rgba(0,0,0,0.75);
     &__quote {
         margin: 2rem 0rem;
-
         h4 {
             padding: 1.1rem;
         }
 
+    }
+    &__thoughts {
+        padding: 3rem;
+        margin: 1rem;
     }
     &__info {
         display: flex;
