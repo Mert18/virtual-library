@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useState} from 'react'
 import Layout from '../../core/Layout';
-import { authenticate, isAuth } from '../../auth/helpers';
+import { authenticate } from '../../auth/helpers';
 
 const CreatePost = () => {
 
